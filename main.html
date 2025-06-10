@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kusmir Shop - Par mums</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            background: #ffffff;
+            border: 2px solid #34495e;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .company-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .info-card {
+            background: #ffffff;
+            border: 1px solid #bdc3c7;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .info-card::before {
+            display: none;
+        }
+
+        .info-card:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transform: none;
+        }
+
+        .info-card h2 {
+            color: #2c3e50;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #34495e;
+            padding-bottom: 10px;
+        }
+
+        .info-card h2::before {
+            display: none;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #34495e;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-value {
+            color: #2c3e50;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .contact-section {
+            background: #ffffff;
+            border: 1px solid #bdc3c7;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .phone-number {
+            font-size: 1.8rem;
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 40px;
+            background: #34495e;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            border: 2px solid #2c3e50;
+            letter-spacing: 1px;
+        }
+
+        .phone-number:hover {
+            background: #2c3e50;
+            transform: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: #ffffff;
+            border: 1px solid #bdc3c7;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer p {
+            color: #7f8c8d;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .company-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-card {
+                padding: 20px;
+            }
+            
+            .phone-number {
+                font-size: 1.5rem;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Kusmir Shop</h1>
+            <p>Jūsu uzticamais partneris</p>
+        </header>
+
+        <main>
+            <section class="company-info">
+                <div class="info-card">
+                    <h2>Uzņēmuma informācija</h2>
+                    <div class="info-item">
+                        <span class="info-label">Nosaukums:</span>
+                        <span class="info-value">SIA "KUSMIR 123"</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Reģistrācijas numurs:</span>
+                        <span class="info-value">40203081294</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">PVN numurs:</span>
+                        <span class="info-value">LV40203081294</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h2>Adrese</h2>
+                    <div class="info-item">
+                        <span class="info-label">Juridiskā adrese:</span>
+                        <span class="info-value">Daugavpils, Kauņas iela 7 - 95<br>LV-5404, Latvija</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h2>Bankas rekvizīti</h2>
+                    <div class="info-item">
+                        <span class="info-label">Bankas konts:</span>
+                        <span class="info-value">LV06HABA0551043839253</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Banka:</span>
+                        <span class="info-value">SWEDBANK AS</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">SWIFT kods:</span>
+                        <span class="info-value">HABALV22XXX</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section">
+                <h2>Sazinies ar mums</h2>
+                <a href="tel:+37124812914" class="phone-number">+371 24812914</a>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Kusmir Shop. Visas tiesības aizsargātas.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.info-card');
+            
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html> 
